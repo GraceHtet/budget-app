@@ -3,7 +3,7 @@ class Category < ApplicationRecord
 
   has_one_attached :icon, dependent: :destroy
 
-  has_and_belongs_to_many :money_trans
+  has_and_belongs_to_many :money_transactions, dependent: :destroy
 
   validates :name, presence: true
 end
