@@ -73,3 +73,7 @@ section {
 .log-btn:active {
   transform: translateY(3px);
 }
+
+.icon {
+  border-radius: 50%;
+}
