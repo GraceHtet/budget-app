@@ -1,9 +1,10 @@
 <section class='category'>
     <h1>Categories</h1>
     <% @categories.each do |category|%>
-        <%= link_to category_path(category.id) do%>
+        <%= link_to category_money_transactions_path(category) do%>
             <h2><%= category.name %></h2>
             <%= image_tag category.icon ,width:'50px', height:'50px', class:'icon' %>
+            <p>Total amount: <%= category.money_transactions.sum(:amount)%></p>
         <% end %>
     <% end %>
 

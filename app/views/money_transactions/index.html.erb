@@ -1,0 +1,13 @@
+<section class='money-transaction'>
+    <h1>Transactions</h1>
+    <%= image_tag @category.icon, width:'50px', height:'50px', class:'icon'%>
+    <h2><%= @category.name%></h2>
+    <p>Total amount: <%= @category.money_transactions.sum(:amount)%></p>
+    <% @transactions.each do |t|%>
+        <p><%= t.name %></p>
+        <p><%= t.amount %> $</p>
+    <% end %>
+
+    <%= link_to '+ New Transactions', new_category_money_transaction_path(category_id: @category.id)%>
+    <%= link_to 'Back', categories_path%>
+</section>
