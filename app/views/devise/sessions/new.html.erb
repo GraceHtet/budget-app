@@ -1,0 +1,27 @@
+<section class='devise-container'>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class='nav'>
+      <%= link_to "🡨",home_path, class:'back'%>
+      <h2>Login</h2>
+      <span>Login</span>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, placeholder:'Email',autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, placeholder:'Password', autocomplete: "current-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Login", class:'log-btn' %>
+    </div>
+  <% end %>
+
+  <div class='log-links'>
+    <%= render "devise/shared/links"%>
+  </div>
+</section>
