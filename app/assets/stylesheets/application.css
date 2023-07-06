@@ -25,12 +25,66 @@ main {
 section {
   width: 100%;
   height: 100%;
+  background: #fff;
+  position: relative;
+}
+
+.notice,
+.alert {
+  background: green;
+  color: #fff;
+  text-align: center;
+  font-size: small;
+}
+
+.alert {
+  background: orangered;
+}
+
+.nav {
+  width: 100%;
+
   background: var(--main-color);
   color: #fff;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 1px solid #ccc;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input[type='checkbox'] {
+  width: auto;
+}
+
+.log-links {
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.log-link {
+  background: none;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 0px 3px 0px #ffffff;
+  cursor: pointer;
 }
 
 .home {
   display: grid;
+  background: var(--main-color);
+
+  color: #fff;
   grid-template-rows: 85% 10%;
 }
 
@@ -49,14 +103,14 @@ section {
 
 .log-btn {
   display: inline-block;
-  width: 80%;
+  width: 100%;
   color: #fff;
   text-decoration: none;
   text-align: center;
   padding: 15px 0;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 3px 0;
 }
 
 .log-btn:first-child {
@@ -74,6 +128,97 @@ section {
   transform: translateY(3px);
 }
 
+.home .log-btn {
+  width: 80%;
+  margin: 3px 0;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: #777;
+}
+
+.back {
+  color: #fff;
+}
+
+span {
+  font-size: small;
+}
+
+.log-out {
+  color: #fff;
+  background: none;
+  border: 1px inset #fff;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: small;
+  cursor: pointer;
+}
+
+.empty {
+  color: #ccc;
+  line-height: 10;
+  text-align: center;
+}
+
+.cat-link {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.category .cat-link:hover {
+  color: green;
+  border: 2px dotted green;
+  padding: 7px;
+}
+
 .icon {
   border-radius: 50%;
+}
+
+.cat-info,
+.cat-info h2 {
+  text-align: left;
+}
+
+.trans {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.btn {
+  background: green;
+  color: #fff;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.btn:hover {
+  font-weight: bold;
+}
+
+.form-group {
+  margin: 10px 0;
+}
+
+.form-group label {
+  font-style: italic;
+  display: block;
+  margin-bottom: 5px;
 }

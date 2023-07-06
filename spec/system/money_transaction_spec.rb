@@ -40,7 +40,7 @@ RSpec.describe 'Money Transaction', type: :system do
         end
 
         scenario 'it should redirect to categories page' do
-            click_link 'Back'
+            click_link "🡨"
 
             assert_current_path categories_path
         end

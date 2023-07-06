@@ -1,4 +1,5 @@
 <section class='form'>
+    <%= render partial:'shared/nav', locals:{title:'New Category', url:categories_path}%>
     <%= form_with model:@category, url:categories_path, method: :post, html: {multipart: true} do |f| %>
         <div class='form-group'>
             <%= f.label :name, 'Name'%>
@@ -11,9 +12,7 @@
         </div>    
 
         <div class="actions">
-            <%= f.submit "Submit" %>
+            <%= f.submit "Submit" , class: 'log-btn'%>
         </div>
     <% end %>
-    
-    <%= link_to 'Back to Categories', categories_path%>
 </section>

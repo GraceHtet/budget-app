@@ -1,13 +1,18 @@
 <section class='money-transaction'>
-    <h1>Transactions</h1>
-    <%= image_tag @category.icon, width:'50px', height:'50px', class:'icon'%>
-    <h2><%= @category.name%></h2>
-    <p>Total amount: <%= @category.money_transactions.sum(:amount)%> $</p>
+    <%= render partial:'shared/nav', locals:{title:'Transactions', url:categories_path}%>
+    <div class='cat-link'>
+        <%= image_tag @category.icon, width:'50px', height:'50px', class:'icon'%>
+        <div class='cat-info'>
+            <h2><%= @category.name %></h2>
+            <small>Total amount: <%= @category.money_transactions.sum(:amount)%> $</small>
+        </div>
+    </div>
     <% @transactions.each do |t|%>
-        <p><%= t.name %></p>
-        <p><%= t.amount %> $</p>
+        <p class='trans'>
+            <em><%= t.name %></em>
+        <span><%= t.amount %> $</span>
+        </p>
     <% end %>
 
-    <%= link_to '+ New Transaction', new_category_money_transaction_path(category_id: @category.id)%>
-    <%= link_to 'Back', categories_path%>
+    <%= link_to '+ New Transaction', new_category_money_transaction_path(category_id: @category.id), class: 'btn'%>
 </section>
