@@ -1,5 +1,5 @@
 class MoneyTransactionsController < ApplicationController
-  before_action :find_category, only: [:index, :new, :create]
+  before_action :find_category, only: %i[index new create]
 
   def index
     @transactions = @category.money_transactions
@@ -21,7 +21,7 @@ class MoneyTransactionsController < ApplicationController
           category.money_transactions << @transaction if category.present?
         end
       end
-      
+
       redirect_to category_money_transactions_path(@category), notice: 'Transaction was successfully created.'
     else
       render :new, alert: "Transaction wasn't created."

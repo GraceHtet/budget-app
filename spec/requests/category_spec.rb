@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Category", type: :request do
-  
+RSpec.describe 'Category', type: :request do
   include Devise::Test::IntegrationHelpers
 
   before(:each) do
@@ -9,13 +8,12 @@ RSpec.describe "Category", type: :request do
     sign_in @user
   end
 
-  describe "GET /index" do
-
+  describe 'GET /index' do
     before(:each) do
       get categories_path
     end
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
@@ -28,13 +26,12 @@ RSpec.describe "Category", type: :request do
     end
   end
 
-  describe "GET /new" do
-
+  describe 'GET /new' do
     before(:each) do
       get new_category_path
     end
 
-    it "returns http success" do
+    it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
 
@@ -46,5 +43,4 @@ RSpec.describe "Category", type: :request do
       assert_template :new
     end
   end
-
 end

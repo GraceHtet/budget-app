@@ -43,7 +43,6 @@ section {
 
 .nav {
   width: 100%;
-
   background: var(--main-color);
   color: #fff;
   padding: 10px 5px;
@@ -76,14 +75,13 @@ input[type='checkbox'] {
   background: none;
   color: #fff;
   border: none;
-  box-shadow: 0px 0px 3px 0px #ffffff;
+  box-shadow: 0 0 3px 0 #fff;
   cursor: pointer;
 }
 
 .home {
   display: grid;
   background: var(--main-color);
-
   color: #fff;
   grid-template-rows: 85% 10%;
 }

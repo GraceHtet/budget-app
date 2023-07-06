@@ -3,8 +3,7 @@ class CategoriesController < ApplicationController
     @categories = Category.includes(:author).where(author: current_user)
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @category = Category.new
