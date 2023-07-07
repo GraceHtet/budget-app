@@ -24,7 +24,7 @@
 
         <div class="form-group">
             <%= f.label :categories_ids, 'Category'%>
-            <%= f.collection_check_boxes :category_ids, Category.all.includes(:user), :id, :name  do |b| %>
+            <%= f.collection_check_boxes :category_ids, Category.includes(:author).where(author: current_user), :id, :name  do |b| %>
                 <% checked = b.text == @category.name %>
                 <%= b.label { b.check_box(checked: checked) + b.text } %>
             <% end %>
