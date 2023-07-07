@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&display=swap');
 
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('FontsFree-Net-proxima_nova_reg-webfont.ttf') format('truetype'),
+    url('FontsFree-Net-Proxima-Nova-Bold.otf') format('opentype'),
+    url('FontsFree-Net-Proxima-Nova-Light.otf') format('opentype');
+}
+
 :root {
   --main-color: #3778c2;
+  --second-color: #5fb523;
+  --text-color: #434b54;
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'Figtree', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -31,7 +41,7 @@ section {
 
 .notice,
 .alert {
-  background: green;
+  background: var(--second-color);
   color: #fff;
   text-align: center;
   font-size: small;
@@ -177,8 +187,8 @@ span {
 }
 
 .category .cat-link:hover {
-  color: green;
-  border: 2px dotted green;
+  color: var(--second-color);
+  border: 2px dotted var(--second-color);
   padding: 7px;
 }
 
@@ -198,7 +208,7 @@ span {
 }
 
 .btn {
-  background: green;
+  background: var(--second-color);
   color: #fff;
   padding: 20px 0;
   position: absolute;
