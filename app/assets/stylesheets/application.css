@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: 'Proxima Nova';
-  src: url('FontsFree-Net-proxima_nova_reg-webfont.ttf') format('truetype'),
+  src:
+    url('FontsFree-Net-proxima_nova_reg-webfont.ttf') format('truetype'),
     url('FontsFree-Net-Proxima-Nova-Bold.otf') format('opentype'),
     url('FontsFree-Net-Proxima-Nova-Light.otf') format('opentype');
 }
