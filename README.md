@@ -45,7 +45,7 @@ Money Tracker App is an app that helps you to manage your budget. You can create
 
 ### 🚀 Live Demo
 
-- [Live Demo Link]([https://money-tracker-k36v.onrender.com](https://money-tracker-rails-6abdef4b7828.herokuapp.com/))
+- [Live Demo Link](https://money-tracker-k36v.onrender.com](https://money-tracker-rails-6abdef4b7828.herokuapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
