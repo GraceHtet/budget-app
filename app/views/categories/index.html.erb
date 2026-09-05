@@ -5,7 +5,7 @@
     <% else %>
     <% @categories.each do |category|%>
         <%= link_to category_money_transactions_path(category),class:'cat-link' do%>
-            <%= image_tag category.icon ,width:'50px', height:'50px', class:'icon' %>
+            <%= image_tag category.icon ,width:'50px', height:'50px', class:'icon' if category.icon.attached? %>
             <div class='cat-info'>
                 <h2><%= category.name %></h2>
                 <small>Total amount: <%= category.money_transactions.sum(:amount)%> $</small>
