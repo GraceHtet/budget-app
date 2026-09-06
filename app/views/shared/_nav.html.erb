@@ -1,0 +1,9 @@
+<div class='nav'>
+    <% if title == 'Categories'%>
+        <span>Home</span>
+    <% else%>
+        <%= link_to "🡨", url, class:'back' %>
+    <%end%>
+    <h2><%= title %></h2>
+    <%= button_to "Logout", destroy_user_session_path , method: :delete, class:'log-out' %>
+</div>
