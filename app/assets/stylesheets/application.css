@@ -29,7 +29,7 @@ body {
 main {
   width: 375px;
   height: 100vh;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
 
 section {
@@ -99,7 +99,7 @@ input[type='checkbox'] {
 
 .home h1 {
   font-size: 2em;
-  font-family: 'Lobster', cursive;
+  font-family: Lobster, cursive;
   font-weight: normal;
   text-align: center;
   line-height: 20;

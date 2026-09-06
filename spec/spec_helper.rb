@@ -82,11 +82,5 @@ RSpec.configure do |config|
   #   Kernel.srand config.seed
 end
 
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome,
-                                      options: { driver_path: 'C:/Program Files/Google/Chrome/chromedriver.exe' })
-end
-
-Capybara.javascript_driver = :selenium_chrome
-
-Capybara.default_driver = :selenium_chrome
+# Capybara/Selenium driver configuration lives in rails_helper.rb, since
+# Rails needs to be loaded first and this file is required before that.
